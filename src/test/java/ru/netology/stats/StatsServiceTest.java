@@ -53,7 +53,7 @@ class StatsServiceTest {
     }
 
     @Test
-    public void belowAverageTest() {
+    public void aboveAverageTest() {
         StatsService service = new StatsService();
         long[] results = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long actual = service.higherThanAverage(results);

@@ -45,14 +45,9 @@ public class StatsService {
     }
 
     public int lowerThanAverage(long[] results) {
-        long total = 0;
-        int sum = 0;
         int underAverage = 0;
-        long monthResult = 0;
         for (long result : results) {
-            total += result;
-            long average = total / results.length;
-            if (monthResult < average) {
+            if (result < averageSales(results)) {
                 underAverage++;
 
             }
@@ -63,14 +58,9 @@ public class StatsService {
     }
 
     public int higherThanAverage(long[] results) {
-        int sum = 0;
-        long total = 0;
         int aboveAverage = 0;
-        long monthResult = 0;
         for (long result : results) {
-            total += result;
-            long average = total / results.length;
-            if (monthResult < average) {
+            if (result > averageSales(results)) {
                 aboveAverage++;
 
             }
